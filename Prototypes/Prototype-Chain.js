@@ -34,4 +34,6 @@ Person.prototype.addToFamily = function (newFamily) {
     jerry.addToFamily(jerry)
     chuck.addToFamily(chuck)
     walter.addToFamily(walter)
-    console.log(Person.prototype.family)
+
+    chuck.addToFamily(chuck) // duplicategitt
+    console.log(Person.prototype.family, Person.prototype.family.length)
