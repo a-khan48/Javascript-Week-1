@@ -1,21 +1,19 @@
-const hands = ['rock', 'paper', 'Scissors'];
+const hands = ['rock', 'paper', 'scissors'];
 
 function getHand() {
-    let randomNumber = (parseInt(Math.random() * 10 % 3));
+    let randomNumber = parseInt(Math.random() * 10 % 3);
     let randomHand = hands[randomNumber]
     return randomHand
 }
 
 let player1 = {
     name: "P1",
-    getHand: getHand()
-
-    
+    getHand: getHand,    
 }
 
 let player2 = {
     name: "P2",
-    getHand: getHand()
+    getHand: getHand,
 }
 
 playRound(player1, player2)
@@ -39,13 +37,16 @@ function playRound(player1, player2) {
         (handP1 === "scissors" && handP2 === "paper")
         )
            { console.log("Player 1 throws", handP1,".", "Player 2 throws", handP2,".")
-            console.log(player1.name + "wins!");
+            console.log(player1.name + " wins!");
+            p1Count++;
         } else if (
             (handP2 === "rock" && handP1 === "scissors") ||
             (handP2 === "paper" && handP1 === "rock") ||
             (handP2 === "scissors" && handP1 === "paper")
             )
-                console.log("Player 1 throws", handP1,".", "Player 2 throws", handP2,".")
-                console.log(player2.name + "wins!");
+                { console.log("Player 1 throws", handP1,".", "Player 2 throws", handP2,".")
+                console.log(player2.name + " wins!");
+                p2Count++;
+            }
       } 
 }
