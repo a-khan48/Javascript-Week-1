@@ -32,13 +32,13 @@ getCurrentPhoto: function () {
     console.log(photoSlideShow.currentPhotoIndex);
     photoSlideShow.nextPhoto();
 
-// // prevPhoto
+// prevPhoto
     console.log(photoSlideShow.currentPhotoIndex);
     photoSlideShow.prevPhoto();
     console.log(photoSlideShow.currentPhotoIndex);
     photoSlideShow.prevPhoto();
 
-// // getCurrentPhoto
+// getCurrentPhoto
 
     console.log(photoSlideShow.getCurrentPhoto());
     photoSlideShow.nextPhoto();
